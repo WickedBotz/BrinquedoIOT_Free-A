@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.appbrinquedoopeniot_Free"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="20" />
+
+    
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" >
+        <activity
+            android:name="com.example.appbrinquedoopeniot_Free.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.appbrinquedoopeniot_Free.Values_bottons"
+            android:label="@string/title_activity_values_bottons" >
+        </activity>
+        <activity
+            android:name="com.example.appbrinquedoopeniot_Free.PairedDevices"
+            android:label="@string/title_activity_paired_devices" >
+        </activity>
+        <activity
+            android:name="com.example.appbrinquedoopeniot_Free.InfoFragment"
+            android:label="@string/title_activity_info_fragment" >
+        </activity>
+    </application>
+
+</manifest>

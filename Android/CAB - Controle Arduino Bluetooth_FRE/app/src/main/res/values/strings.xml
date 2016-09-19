@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CAB-Controle Arduino Bluetooth</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="sobre_app">Grupo de Robótica da Cátolica de Santa Catarina</string>
+    <string name="action_settings">Salvar e Voltar</string>
+    <string name="title_activity_values_bottons">Valores dos botoes</string>
+    <string name="title_activity_paired_devices">Dispositivos pareados</string>
+    <string name="joystick_bt_connect">Conectar</string>
+    <string name="title_activity_info_fragment">InfoFragment</string>
+    <string name="Dados_arduino">Dados arduino na tela</string>
+    <string name="sobre_app_botao">Sobre o app</string>
+    <string name="Valores_botoes">Valores dos Botoes</string>
+
+</resources>
