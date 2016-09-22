@@ -7,7 +7,7 @@ Possibilidade de conectar com qualquer modulo bluetooth serial que ja esteja par
 
 Aplicação continuada em Android Studio.
 
-O desenvolvimento dessa aplicação se teve como continuação du uma versão do projeto em eclipse com ADT-plugin que pode ser encontrado no repositorio do
+O desenvolvimento dessa aplicação se teve como continuação de uma versão do projeto em eclipse com ADT-plugin que pode ser encontrado no repositorio do
 <a href="https://github.com/WickedBotz/BrinquedoIOT_Free-E">BrinquedoIOT_Free-E</a>.
 
 Link para instalação do plataforma de desenvolvimento android <a href="https://developer.android.com/studio/index.html?hl=pt-br">Android Studio</a>.
