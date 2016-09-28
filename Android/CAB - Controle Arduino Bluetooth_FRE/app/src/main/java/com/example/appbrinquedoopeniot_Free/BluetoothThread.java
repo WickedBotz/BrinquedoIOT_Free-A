@@ -37,19 +37,19 @@ public class BluetoothThread extends Thread {
 	private static final String TAG = "BluetoothThread";
 
 	// Delimiter used to separate messages
-	private static final char DELIMITER = '\n';
+	private static final char DELIMITER = ';';
 
 	// UUID that specifies a protocol for generic bluetooth serial communication
 	private static final UUID uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
-	// Ira armazenar o endereço MAC do disposivo Bluetooth
+	// Ira armazenar o endereï¿½o MAC do disposivo Bluetooth
 	private final String address;
 
-	// BluetoothSocket é um ponto de conexão que permite trocar dados com outro
+	// BluetoothSocket ï¿½ um ponto de conexï¿½o que permite trocar dados com outro
 	// disposivo bleutooth atravs do ImputStream() e OutputStream()
 	public BluetoothSocket socket;
 
-	// BluetoothSocket é um ponto de conexão que permite trocar dados com outro
+	// BluetoothSocket ï¿½ um ponto de conexï¿½o que permite trocar dados com outro
 	// disposivo bleutooth atravs do ImputStream() e OutputStream()
 	private OutputStream outStream;
 	private InputStream inStream;
@@ -62,7 +62,7 @@ public class BluetoothThread extends Thread {
 	private String rx_buffer = "";
 
 	/**
-	 * Construtor da classe, recebe o endereço MAC do dispositivo bluetooth
+	 * Construtor da classe, recebe o endereï¿½o MAC do dispositivo bluetooth
 	 * e um Handler para as mensagens recebidas.
 	 *
 	 */
@@ -82,7 +82,7 @@ public class BluetoothThread extends Thread {
 	
 
 	/**
-	 * Devolve o manipulador(Handler) de escrita para a conexão. As mensagens
+	 * Devolve o manipulador(Handler) de escrita para a conexï¿½o. As mensagens
 	 * recebidas por este manipulador(handler) sera escrito no Bluetooth socket.
 	 */
 	public Handler getWriteHandler() {
@@ -90,7 +90,7 @@ public class BluetoothThread extends Thread {
 	}
 
 	/**
-	 * Conectar o Bluetooth socket, ou lançar uma exeção se ele falhar.
+	 * Conectar o Bluetooth socket, ou lanï¿½ar uma exeï¿½ï¿½o se ele falhar.
 	 */
 	private void connect() throws Exception {
 
