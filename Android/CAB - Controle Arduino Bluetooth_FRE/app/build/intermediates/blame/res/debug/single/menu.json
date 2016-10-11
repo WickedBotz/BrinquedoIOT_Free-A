@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\menu\\paired_devices.xml",
+        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\menu\\paired_devices.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu.xml",
+        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\menu\\values_bottons.xml",
+        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\menu\\values_bottons.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\menu\\info.xml",
+        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\menu\\info.xml"
+    }
+]

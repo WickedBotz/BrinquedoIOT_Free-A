@@ -14,8 +14,8 @@ gen/
 out/
 
 # Gradle files
-.gradle/
-build/
+Android/CAB - Controle Arduino Bluetooth_FRE/.gradle/
+Android/CAB - Controle Arduino Bluetooth_FRE/build/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -42,4 +42,3 @@ Android/CAB - Controle Arduino Bluetooth_FRE/.idea/workspace.xml
 Android/CAB - Controle Arduino Bluetooth_FRE/.idea/workspace.xml
 Android/CAB - Controle Arduino Bluetooth_FRE/.idea/workspace.xml
 Android/CAB - Controle Arduino Bluetooth_FRE/.idea/libraries/support_v4_23_4_0.xml
-teste.txt

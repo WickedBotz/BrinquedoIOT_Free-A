@@ -73,16 +73,16 @@ public class Values_bottons extends Activity {
 	}
 	
 public void valoresPadrao(){
-	EditFrente.setText("a");
-	EditDireita.setText("b");
-	EditEsquerda.setText("c");
-	EditTras.setText("d");
-	EditX.setText("e");
-	EditY.setText("f");
-	EditZ.setText("g");
-	EditA.setText("h");
-	EditB.setText("i");
-	EditC.setText("j");
+	EditFrente.setText("8");
+	EditDireita.setText("6");
+	EditEsquerda.setText("4");
+	EditTras.setText("2");
+	EditX.setText("x");
+	EditY.setText("y");
+	EditZ.setText("z");
+	EditA.setText("a");
+	EditB.setText("b");
+	EditC.setText("c");
 	EditConteudoAVoltar.setText("0");
 		
 	}
@@ -96,35 +96,7 @@ public void valoresPadrao(){
 		return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		
-		//Ja que usamos o setDisplayHomeAsUpEnabled para true, para poder usar o icone do home, o onOptionsItemSelected
-		//pasa a ser onMenuItemSelected
-//		int id = item.getItemId();
-//		switch (id) {
-//		case R.id.action_settings:
-//			setResult(RESULT_OK, pegarValores());
-//			
-//			finish();
-//			break;
-//			
-//		case android.R.id.home:
-//			finish();
-//			break;
-//		case R.id.valores_padrao:
-//			valoresPadrao();
-//			break;
-//
-//		default:
-//			break;
-//		}
-//		
-		return super.onOptionsItemSelected(item);
-	}
+
 	public boolean onMenuItemSelected(int panel, MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.action_settings:
@@ -146,15 +118,4 @@ public void valoresPadrao(){
 
 		return true;
 	};
-
-	
-
-	@Override
-	protected void onStop() {
-		super.onStop();
-		
-	}
-	
-	
-
 }

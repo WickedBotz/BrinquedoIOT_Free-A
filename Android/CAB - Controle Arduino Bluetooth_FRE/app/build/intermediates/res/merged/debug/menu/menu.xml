@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <!-- <item
+        android:id="@+id/item1"
+        android:showAsAction="always"
+        android:title="Info"/>     
+         
+    <item
+        android:id="@+id/item2"
+        android:title="Não faço nada"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/item4"
+        app:showAsAction="never"
+        android:title="3"/>-->   
+    <item
+        android:id="@+id/item3"
+        android:title="@string/Valores_botoes"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/item5"
+        android:title="@string/Dados_arduino"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/item6"
+                android:title=""/>
+<!--             <item -->
+<!--                 android:id="@+id/item7" -->
+<!--                 android:title="Ocultar"/> -->
+            
+        </menu>
+    </item>
+    <item
+        android:id="@+id/item8"
+        android:title="@string/sobre_app_botao"
+        app:showAsAction="never"/>
+
+</menu>

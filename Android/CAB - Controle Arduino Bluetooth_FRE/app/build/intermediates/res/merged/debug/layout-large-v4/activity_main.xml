@@ -1,0 +1,253 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="8.0dip"
+    android:paddingRight="8.0dip"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.appbrinquedoopeniot_Free.MainActivity" >
+
+    <Button
+        android:id="@+id/btnConectar"
+        android:layout_width="100.0dip"
+        android:layout_height="20.0dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/connect_ani"
+        android:onClick="connectButtonPressed"
+        android:text="@string/joystick_bt_connect"
+        android:textAllCaps="true"
+        android:textColor="@color/White"
+        android:textSize="13.0dip" />
+
+    <LinearLayout
+        android:id="@+id/botoes1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/botoes2"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ImageView01"
+        android:gravity="bottom|center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/bt_frente"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:background="@drawable/layout_botao_frente" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_esquerda"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:background="@drawable/layout_botao_esquerda" />
+
+            <ImageView
+                android:id="@+id/SeparadorBola"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:src="@drawable/mid" />
+
+            <Button
+                android:id="@+id/bt_direita"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:background="@drawable/layout_botao_direita" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_tras"
+            android:layout_width="70.0dip"
+            android:layout_height="70.0dip"
+            android:background="@drawable/layout_botao_tras" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/FundoDados"
+        android:layout_width="100.0dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toEndOf="@+id/botoes1"
+        android:layout_toStartOf="@+id/botoes2"
+        android:background="@color/Black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/txtArduino01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="6.0dip"
+            android:gravity="center"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txtArduino02"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="6.0dip"
+            android:gravity="center"
+            android:textColor="@color/White"
+           android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txtArduino03"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="6.0dip"
+            android:gravity="center"
+            android:textColor="@color/White"
+            android:textSize="12.0sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txtArduino04"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="6.0dip"
+            android:gravity="center"
+            android:textColor="@color/White"
+           android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txtArduino05"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="6.0dip"
+            android:gravity="center"
+            android:textColor="@color/White"
+           android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txtArduino06"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="6.0dip"
+            android:gravity="center"
+            android:textColor="@color/White"
+           android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/txtArduino07"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="6.0dip"
+            android:gravity="center"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botoes2"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ImageView02"
+        android:gravity="bottom|center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_x"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/layout_botao_x" />
+
+            <Button
+                android:id="@+id/bt_y"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/layout_botao_y" />
+
+            <Button
+                android:id="@+id/bt_z"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:background="@drawable/layout_botao_z" />
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            
+            <ImageView
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:src="@drawable/mid" />
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_a"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/layout_botao_a" />
+
+            <Button
+                android:id="@+id/bt_b"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/layout_botao_b" />
+
+            <Button
+                android:id="@+id/bt_c"
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:background="@drawable/layout_botao_c" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@id/btnConectar"
+        android:src="@drawable/catolicasc_logo" />
+
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/btnConectar"
+        android:src="@drawable/arduino_logo" />
+
+</RelativeLayout>

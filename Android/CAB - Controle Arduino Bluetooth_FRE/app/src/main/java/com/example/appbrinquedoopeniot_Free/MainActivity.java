@@ -5,6 +5,8 @@ import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.content.Intent;
@@ -212,16 +214,6 @@ public class MainActivity extends FragmentActivity {
             } else {
                 // Bluetooth nao conectado
             }
-
-            // Para mandar em tempo real
-            // if (btt != null) {
-            // Message msg = Message.obtain();
-            // msg.obj = mensagem;
-            // writeHandler.sendMessage(msg);
-            // } else {
-            // Toast.makeText(getApplicationContext(), "Bluetooth nao
-            // conectado", Toast.LENGTH_LONG).show();
-            // }
             return false;
         }
 
@@ -233,20 +225,19 @@ public class MainActivity extends FragmentActivity {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
 
-            // Retrono do pedido de ativação do Bluetooth
+            // Retorno do pedido de ativação do Bluetooth
             case REQUEST_ENABLE_BT:
 
                 if (resultCode == Activity.RESULT_OK) {
-                    Toast.makeText(getApplicationContext(), "Bluetooth Ativado XD", Toast.LENGTH_LONG).show();
+                   showTextWithColorGreen(getResources().getString(R.string.bluetooth_ativado));
                     listaDeDispositivos();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Você precisa ativar o bluetooth ", Toast.LENGTH_LONG).show();
+                    showTextWithColorRed(getResources().getString(R.string.precisa_ativar_bluetooth));
 
                 }
                 break;
             case SELECT_PAIRED_DEVICE:
                 if (resultCode == RESULT_OK) {
-                    btnConectar = (Button) findViewById(R.id.btnConectar);
                     if (btt == null) {
 
                         btt = new BluetoothThread(data.getStringExtra("btDevAddress"), new Handler() {
@@ -263,17 +254,17 @@ public class MainActivity extends FragmentActivity {
                                 if (s.equals("CONNECTED")) {
                                     btnConectar.setText("Desconectar");
                                     btnConectar.setEnabled(true);
-
+                                    showTextWithColorGreen(getResources().getString(R.string.conectado));
                                     // ativado = true;
                                 } else if (s.equals("DISCONNECTED")) {
 
-                                    Toast.makeText(getApplicationContext(), "Desconectado", Toast.LENGTH_LONG).show();
+                                    showToast(getResources().getString(R.string.desconectado));
                                     btnConectar.setText("Conectar");
 
                                     btt = null;
                                     btnConectar.setEnabled(true);
                                 } else if (s.equals("CONNECTION FAILED")) {
-                                    Toast.makeText(getApplicationContext(), "Falha na conexao", Toast.LENGTH_LONG).show();
+                                    showTextWithColorRed(getResources().getString(R.string.falhaNaConexao));
                                     btnConectar.setText("Conectar");
 
                                     btt = null;
@@ -284,9 +275,7 @@ public class MainActivity extends FragmentActivity {
                                         if (txtsArduino.size() > i) {
                                             txtsArduino.get(i).setText(mensagens[i]);
                                         } else if (imprimir) {
-                                            Toast.makeText(getApplicationContext(),
-                                                    "Numeros maximos de linhas ultrapassado!!!!!!!", Toast.LENGTH_LONG)
-                                                    .show();
+                                            showToast("Numeros maximos de linhas ultrapassado!!!!!!!");
                                             imprimir = false;
                                             break;
                                         }
@@ -297,24 +286,22 @@ public class MainActivity extends FragmentActivity {
                     }
 
                     if (btt != null) {
-                        // Get the handler that is used to send messages
+                        // Busca o handler que sera usado para enviar as mensagens.
                         writeHandler = btt.getWriteHandler();
 
-                        // Run the thread
+                        // Roda a thread
                         btt.start();
 
                         btnConectar.setText("Conectando...");
                         btnConectar.setEnabled(false);
                     }
-                    // break;
-
                 } else {
-                    Toast.makeText(getApplicationContext(), "Nenhum dispositivo Selecionado", Toast.LENGTH_LONG).show();
+                    showToast("Nenhum dispositivo Selecionado");
                 }
                 break;
             case VALORES:
                 if (resultCode == RESULT_OK) {
-                    Toast.makeText(getApplicationContext(), "Mudanças salvas", Toast.LENGTH_LONG).show();
+                    showTextWithColorGreen(getResources().getString(R.string.mudanca_salvas));
                     frente = data.getStringExtra("frente");
                     direita = data.getStringExtra("direita");
                     esquerda = data.getStringExtra("esquerda");
@@ -327,7 +314,7 @@ public class MainActivity extends FragmentActivity {
                     c = data.getStringExtra("c");
                     conteudoAVoltar = data.getStringExtra("conteudoAVoltar");
                 } else {
-                    Toast.makeText(getApplicationContext(), "Mudanças não salvas", Toast.LENGTH_LONG).show();
+                   showTextWithColorRed(getResources().getString(R.string.mudancas_nao_Salvas));
                 }
 
                 break;
@@ -360,12 +347,6 @@ public class MainActivity extends FragmentActivity {
                 finish();
 
                 break;
-		/*
-		 * case R.id.item1:
-		 *
-		 * break; case R.id.item2: Toast.makeText(this, "So mostro meu ID XD: "
-		 * + (item.getItemId() + 1), Toast.LENGTH_SHORT).show(); break;
-		 */
             case R.id.item3:
                 Value_Bottons.putExtra("frente", frente);
                 Value_Bottons.putExtra("direita", direita);
@@ -389,7 +370,7 @@ public class MainActivity extends FragmentActivity {
                     for(TextView txt: txtsArduino){
                         txt.setVisibility(View.VISIBLE);
                     }
-                    Toast.makeText(getApplicationContext(), "Dados visiveis", Toast.LENGTH_LONG).show();
+                    showToast("Dados visiveis");
                     btiMostrarDados.setTitle("Ocultar");
                     mostrarDados = false;
                 } else {
@@ -397,7 +378,7 @@ public class MainActivity extends FragmentActivity {
                         txt.setVisibility(View.INVISIBLE);
                     }
                     dados.setVisibility(View.INVISIBLE);
-                    Toast.makeText(getApplicationContext(), "Dados invisiveis", Toast.LENGTH_LONG).show();
+                    showToast("Dados invisiveis");
                     btiMostrarDados.setTitle("Mostrar");
                     mostrarDados = true;
                 }
@@ -422,16 +403,7 @@ public class MainActivity extends FragmentActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-    protected void onPause() {
-        super.onPause();
-
-        // if (btt != null) {
-        // btt.interrupt();
-        // btt = null;
-        // btnConectar.setText("Conectar");
-        // }
-
+    public void salvarDados(){
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("frente", frente);
@@ -448,6 +420,10 @@ public class MainActivity extends FragmentActivity {
 
         // Confirma a gravação dos dados
         editor.commit();
+    }
+    protected void onPause() {
+        super.onPause();
+        salvarDados();
     }
 
     @Override
@@ -471,7 +447,7 @@ public class MainActivity extends FragmentActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(MainActivity.this,mensagem,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),mensagem,Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -484,6 +460,23 @@ public class MainActivity extends FragmentActivity {
             }
         });
     }
+
+
+    public void showTextWithColorRed(String mensagem){
+        Toast toast = Toast.makeText(getApplicationContext(), mensagem, Toast.LENGTH_SHORT);
+        TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+        v.setTextColor(Color.RED);
+        toast.show();
+    }
+
+    public void showTextWithColorGreen(String mensagem){
+        Toast toast = Toast.makeText(getApplicationContext(), mensagem, Toast.LENGTH_SHORT);
+        TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+        v.setTextColor(Color.GREEN);
+        toast.show();
+    }
+
+
 
     public String caracterFinal(){
        return ";";
