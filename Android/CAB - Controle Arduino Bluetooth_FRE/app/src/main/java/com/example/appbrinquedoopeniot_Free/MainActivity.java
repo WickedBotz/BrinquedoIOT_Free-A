@@ -30,17 +30,18 @@ import java.util.List;
 
 /**
  * Activity principal que cuida referencia botoes da tela principal, e manipula
- * os dados que s�o salvos.
+ * os dados que são salvos.
  *
  * @author Igor Fachini
  */
 @SuppressLint({"HandlerLeak", "ClickableViewAccessibility"})
 public class MainActivity extends FragmentActivity {
 
+
     String frente, direita, esquerda, tras, x, y, z, a, b, c, conteudoAVoltar;
     Button btnConectar, btnFrente, btnDireita, btnEsquerda, btnTras, btn1, btn2, btn3, btn4, btn5, btn6;
     View dados;
-    List<TextView> txtsArduino = new ArrayList<>();
+
     FragmentManager fm = getSupportFragmentManager();
 
     public static final String PREFS_NAME = "Preferences";
@@ -49,22 +50,24 @@ public class MainActivity extends FragmentActivity {
 
     BluetoothThread btt;
     Handler writeHandler;
+    List<TextView> txtsArduino = new ArrayList<>();
 
-    // Requisi��o para Activity de ativa��o do Bluetooth
+    // Requisição para Activity de ativação do Bluetooth
     // Se numero for maior > 0,este codigo sera devolvido em onActivityResult()
     private static final int REQUEST_ENABLE_BT = 1;
-    // Requisi��o para Activity para inciar tela do aplicativos pareados,
+    // Requisição para Activity para inciar tela do aplicativos pareados,
     // que se houver ou nao aplicativo pareado retornara para onActivityResult()
-    // e realizara as devidas a��es conforme a resposta
+    // e realizara as devidas ações conforme a resposta
     public static final int SELECT_PAIRED_DEVICE = 2;
     public static final int VALORES = 4;
 
-    // BluetoothAdapter � comando de entrada padr�o paras todads intera��es com
+    // BluetoothAdapter é comando de entrada padrão paras todads interações com
     private BluetoothAdapter bluetoothPadrao = null;
 
 
+
     /**
-     * Cria��o da tela
+     * Criação da tela
      */
 
     @Override
@@ -112,7 +115,7 @@ public class MainActivity extends FragmentActivity {
         btn6 = (Button) findViewById(R.id.bt_c);
     }
 
-    //SharedPreferences grava dados nos arquivos locais da aplica��o,
+    //SharedPreferences grava dados nos arquivos locais da aplicação,
     //aonde que pode ser acessivel em qualquer tela.
     public void resgatarValoresBotoes() {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
@@ -141,29 +144,34 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
-    public void interromperBluetooth() {
-        btnConectar.setText("Conectar");
-        btnConectar.setEnabled(true);
-        btt.interrupt();
-        btt = null;
+    public void interromperBluetooth(){
+        if(btt != null){
+            btnConectar.setText("Conectar");
+
+            btt.interrupt();
+            btt = null;
+        }
 
     }
 
     public void connectButtonPressed(View v) {
 
         if (bluetoothPadrao == null) {
-            showToast("Dispositivo não possui bluetooth");
+            Toast.makeText(getApplicationContext(), "Dispostivo não possui Bluetooth", Toast.LENGTH_LONG).show();
+
         } else {
             if (!bluetoothPadrao.isEnabled()) {
 
                 Intent novoIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(novoIntent, REQUEST_ENABLE_BT);
             } else {
+
                 listaDeDispositivos();
             }
         }
 
     }
+
 
 
     public void acaoDosBotoes() {
@@ -201,9 +209,22 @@ public class MainActivity extends FragmentActivity {
                     msg.obj = conteudoAVoltar;
                     writeHandler.sendMessage(msg);
                 }
+            } else {
+                // Bluetooth nao conectado
             }
+
+            // Para mandar em tempo real
+            // if (btt != null) {
+            // Message msg = Message.obtain();
+            // msg.obj = mensagem;
+            // writeHandler.sendMessage(msg);
+            // } else {
+            // Toast.makeText(getApplicationContext(), "Bluetooth nao
+            // conectado", Toast.LENGTH_LONG).show();
+            // }
             return false;
         }
+
     }
 
     boolean imprimir = true;
@@ -211,17 +232,21 @@ public class MainActivity extends FragmentActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
+
+            // Retrono do pedido de ativação do Bluetooth
             case REQUEST_ENABLE_BT:
 
                 if (resultCode == Activity.RESULT_OK) {
-                    showToast("Bluetooth Ativado XD");
+                    Toast.makeText(getApplicationContext(), "Bluetooth Ativado XD", Toast.LENGTH_LONG).show();
                     listaDeDispositivos();
                 } else {
-                    showToast("Você precisa ativar o bluetooth");
+                    Toast.makeText(getApplicationContext(), "Você precisa ativar o bluetooth ", Toast.LENGTH_LONG).show();
+
                 }
                 break;
             case SELECT_PAIRED_DEVICE:
                 if (resultCode == RESULT_OK) {
+                    btnConectar = (Button) findViewById(R.id.btnConectar);
                     if (btt == null) {
 
                         btt = new BluetoothThread(data.getStringExtra("btDevAddress"), new Handler() {
@@ -229,28 +254,39 @@ public class MainActivity extends FragmentActivity {
                             @Override
                             public void handleMessage(Message message) {
 
-                                String mensagenRecebida = (String) message.obj;
+                                String s = (String) message.obj;
+                                //String s = btt.read();
 
-                                String mensagens[] = mensagenRecebida.split(";");
+                                String mensagens[] = s.split(";");
 
                                 // Do something with the message
-                                if (mensagenRecebida.equals("CONNECTED")) {
+                                if (s.equals("CONNECTED")) {
                                     btnConectar.setText("Desconectar");
                                     btnConectar.setEnabled(true);
-                                    showToast("Conectado");
+
                                     // ativado = true;
-                                } else if (mensagenRecebida.equals("DISCONNECTED")) {
-                                    showToast("Desconectado");
-                                    interromperBluetooth();
-                                } else if (mensagenRecebida.equals("CONNECTION FAILED")) {
-                                    showToast("Falha na conexão");
-                                    interromperBluetooth();
+                                } else if (s.equals("DISCONNECTED")) {
+
+                                    Toast.makeText(getApplicationContext(), "Desconectado", Toast.LENGTH_LONG).show();
+                                    btnConectar.setText("Conectar");
+
+                                    btt = null;
+                                    btnConectar.setEnabled(true);
+                                } else if (s.equals("CONNECTION FAILED")) {
+                                    Toast.makeText(getApplicationContext(), "Falha na conexao", Toast.LENGTH_LONG).show();
+                                    btnConectar.setText("Conectar");
+
+                                    btt = null;
+                                    btnConectar.setEnabled(true);
                                 } else {
+
                                     for (int i = 0; i < mensagens.length; i++) {
                                         if (txtsArduino.size() > i) {
                                             txtsArduino.get(i).setText(mensagens[i]);
                                         } else if (imprimir) {
-                                            showToast("Numeros maximos de linhas ultrapassado!!!!!!!");
+                                            Toast.makeText(getApplicationContext(),
+                                                    "Numeros maximos de linhas ultrapassado!!!!!!!", Toast.LENGTH_LONG)
+                                                    .show();
                                             imprimir = false;
                                             break;
                                         }
@@ -273,12 +309,12 @@ public class MainActivity extends FragmentActivity {
                     // break;
 
                 } else {
-                    showToast("Nenhum dispositivo Selecionado");
+                    Toast.makeText(getApplicationContext(), "Nenhum dispositivo Selecionado", Toast.LENGTH_LONG).show();
                 }
                 break;
             case VALORES:
                 if (resultCode == RESULT_OK) {
-                    showToast("Mudanças salvas");
+                    Toast.makeText(getApplicationContext(), "Mudanças salvas", Toast.LENGTH_LONG).show();
                     frente = data.getStringExtra("frente");
                     direita = data.getStringExtra("direita");
                     esquerda = data.getStringExtra("esquerda");
@@ -291,20 +327,20 @@ public class MainActivity extends FragmentActivity {
                     c = data.getStringExtra("c");
                     conteudoAVoltar = data.getStringExtra("conteudoAVoltar");
                 } else {
-                    showToast("Mudanças não salvas");
+                    Toast.makeText(getApplicationContext(), "Mudanças não salvas", Toast.LENGTH_LONG).show();
                 }
 
                 break;
         }
-    }
-
-    ;
+    };
 
     private MenuItem btiMostrarDados;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
+
+        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu, menu);
         btiMostrarDados = menu.findItem(R.id.item6);
         btiMostrarDados.setTitle("Mostrar");
@@ -318,10 +354,18 @@ public class MainActivity extends FragmentActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                showToast("Sair");
+                Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
+
                 interromperBluetooth();
                 finish();
+
                 break;
+		/*
+		 * case R.id.item1:
+		 *
+		 * break; case R.id.item2: Toast.makeText(this, "So mostro meu ID XD: "
+		 * + (item.getItemId() + 1), Toast.LENGTH_SHORT).show(); break;
+		 */
             case R.id.item3:
                 Value_Bottons.putExtra("frente", frente);
                 Value_Bottons.putExtra("direita", direita);
@@ -335,24 +379,27 @@ public class MainActivity extends FragmentActivity {
                 Value_Bottons.putExtra("c", c);
                 Value_Bottons.putExtra("conteudoAVoltar", conteudoAVoltar);
                 startActivityForResult(Value_Bottons, VALORES);
+
                 break;
+            // case R.id.item4:
+            // break;
             case R.id.item6:
-                if (btiMostrarDados.getTitle().equals("Mostrar")) {
+                if (mostrarDados) {
                     dados.setVisibility(View.VISIBLE);
-                    for (TextView txt : txtsArduino) {
+                    for(TextView txt: txtsArduino){
                         txt.setVisibility(View.VISIBLE);
                     }
-                    showToast("Dados visiveis");
+                    Toast.makeText(getApplicationContext(), "Dados visiveis", Toast.LENGTH_LONG).show();
                     btiMostrarDados.setTitle("Ocultar");
-                    // mostrarDados = false;
+                    mostrarDados = false;
                 } else {
-                    dados.setVisibility(View.INVISIBLE);
-                    for (TextView txt : txtsArduino) {
+                    for(TextView txt: txtsArduino){
                         txt.setVisibility(View.INVISIBLE);
                     }
-                    showToast("Dados invisiveis");
+                    dados.setVisibility(View.INVISIBLE);
+                    Toast.makeText(getApplicationContext(), "Dados invisiveis", Toast.LENGTH_LONG).show();
                     btiMostrarDados.setTitle("Mostrar");
-                    // mostrarDados = true;
+                    mostrarDados = true;
                 }
 
                 break;
@@ -365,10 +412,25 @@ public class MainActivity extends FragmentActivity {
         }
 
         return true;
+    };
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     protected void onPause() {
         super.onPause();
+
+        // if (btt != null) {
+        // btt.interrupt();
+        // btt = null;
+        // btnConectar.setText("Conectar");
+        // }
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -384,7 +446,7 @@ public class MainActivity extends FragmentActivity {
         editor.putString("c", c);
         editor.putString("conteudoAVoltar", conteudoAVoltar);
 
-        // Confirma a grava��o dos dados
+        // Confirma a gravação dos dados
         editor.commit();
     }
 
@@ -396,7 +458,7 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     public void onStop() {
-        super.onStop();
+        super.onStop();;
         //interromperBluetooth();
 
     }
@@ -405,23 +467,26 @@ public class MainActivity extends FragmentActivity {
     public void onDestroy() {
         super.onDestroy();
     }
-
-    public void showToast(final String mensagem) {
+    public void showToast(final String mensagem){
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(MainActivity.this, mensagem, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,mensagem,Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    public void showText(final String mensagem, final TextView view) {
+    public void showText(final String mensagem, final TextView view){
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 view.setText(mensagem);
             }
         });
+    }
+
+    public String caracterFinal(){
+       return ";";
     }
 
 
