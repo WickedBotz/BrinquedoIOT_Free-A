@@ -37,7 +37,7 @@ captures/
 .idea/workspace.xml
 
 # Keystore files
-*.jks
+#*.jks
 Android/CAB - Controle Arduino Bluetooth_FRE/.idea/workspace.xml
 Android/CAB - Controle Arduino Bluetooth_FRE/.idea/workspace.xml
 Android/CAB - Controle Arduino Bluetooth_FRE/.idea/workspace.xml
