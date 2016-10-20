@@ -2048,14 +2048,20 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f050012;
         public static final int action_settings=0x7f050016;
         public static final int app_name=0x7f050017;
-        public static final int hello_world=0x7f050018;
-        public static final int joystick_bt_connect=0x7f050019;
-        public static final int sobre_app=0x7f05001a;
-        public static final int sobre_app_botao=0x7f05001b;
+        public static final int bluetooth_ativado=0x7f050018;
+        public static final int conectado=0x7f050019;
+        public static final int desconectado=0x7f05001a;
+        public static final int falhaNaConexao=0x7f05001b;
+        public static final int joystick_bt_connect=0x7f05001c;
+        public static final int mudanca_salvas=0x7f05001d;
+        public static final int mudancas_nao_Salvas=0x7f05001e;
+        public static final int precisa_ativar_bluetooth=0x7f05001f;
+        public static final int sobre_app=0x7f050020;
+        public static final int sobre_app_botao=0x7f050021;
         public static final int status_bar_notification_info_overflow=0x7f050013;
-        public static final int title_activity_info_fragment=0x7f05001c;
-        public static final int title_activity_paired_devices=0x7f05001d;
-        public static final int title_activity_values_bottons=0x7f05001e;
+        public static final int title_activity_info_fragment=0x7f050022;
+        public static final int title_activity_paired_devices=0x7f050023;
+        public static final int title_activity_values_bottons=0x7f050024;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080087;

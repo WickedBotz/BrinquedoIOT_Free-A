@@ -4,12 +4,40 @@
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\gplay_ico.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\gplay_ico.png"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\fundo_dados.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\fundo_dados.png"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\logocatolica.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\logocatolica.png"
+    },
+    {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\facebook_ico.png",
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\facebook_ico.png"
     },
     {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\dados.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\dados.png"
+    },
+    {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\fundo_dados.png",
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\fundo_dados.png"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\catolica_ico.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\catolica_ico.png"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\gplus_ico.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\gplus_ico.png"
     },
     {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\catolica_ico.png",
@@ -28,8 +56,16 @@
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\logoarduino.png"
     },
     {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\logoarduino.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\logoarduino.png"
+    },
+    {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\logocatolica.png",
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\logocatolica.png"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\teste.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\teste.png"
     },
     {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\gplay_ico.png",
@@ -38,5 +74,9 @@
     {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\gplus_ico.png",
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\gplus_ico.png"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\facebook_ico.png",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-xhdpi\\facebook_ico.png"
     }
 ]

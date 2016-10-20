@@ -2070,8 +2070,15 @@ containing a value of this type.
         public static final int Animation_AppCompat_DropDownUp=0x7f08008a;
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
          */
         public static final int AppBaseTheme=0x7f08000b;
+        /**  All customizations that are NOT specific to a particular API-level can go here. 
+         */
         public static final int AppTheme=0x7f08008b;
         public static final int Base_AlertDialog_AppCompat=0x7f08008c;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f08008d;

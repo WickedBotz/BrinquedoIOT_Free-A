@@ -5,7 +5,6 @@ import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -24,14 +23,11 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Activity principal que cuida referencia botoes da tela principal, e manipula
+ * Activity principal que cuida e referencia botoes da tela principal, e manipula
  * os dados que são salvos.
  *
  * @author Igor Fachini
@@ -86,15 +82,13 @@ public class MainActivity extends FragmentActivity {
         // Obtem o bluetooth padrao do aparelho celular
         bluetoothPadrao = BluetoothAdapter.getDefaultAdapter();
 
-        // Vereficamos se o aparelho possui adaptador Bluetooth
-
-
+        referenciarElementosTela();
         interromperBluetooth();
         resgatarValoresBotoes();
-        referenciarElementosTela();
+
 
     }
-
+    //Refencia os elementos das telas com o codigo.
     public void referenciarElementosTela() {
         dados = (View) findViewById(R.id.FundoDados);
         txtsArduino.add((TextView) findViewById(R.id.txtArduino01));
@@ -121,19 +115,19 @@ public class MainActivity extends FragmentActivity {
     //aonde que pode ser acessivel em qualquer tela.
     public void resgatarValoresBotoes() {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        frente = settings.getString("frente", "");
-        direita = settings.getString("direita", "");
-        esquerda = settings.getString("esquerda", "");
-        tras = settings.getString("tras", "");
-        x = settings.getString("x", "");
-        y = settings.getString("y", "");
-        z = settings.getString("z", "");
-        a = settings.getString("a", "");
-        b = settings.getString("b", "");
-        c = settings.getString("c", "");
+        frente = settings.getString("frente", "8");
+        direita = settings.getString("direita", "6");
+        esquerda = settings.getString("esquerda", "4");
+        tras = settings.getString("tras", "2");
+        x = settings.getString("x", "x");
+        y = settings.getString("y", "y");
+        z = settings.getString("z", "z");
+        a = settings.getString("a", "a");
+        b = settings.getString("b", "b");
+        c = settings.getString("c", "c");
         conteudoAVoltar = settings.getString("conteudoAVoltar", "");
     }
-
+    //Chama a tela de dispositivos pareados
     public void listaDeDispositivos() {
         if (bluetoothPadrao.isEnabled()) {
             if (btt == null) {
@@ -145,7 +139,7 @@ public class MainActivity extends FragmentActivity {
 
         }
     }
-
+    //Interrope e desconecta o Bluetooth
     public void interromperBluetooth(){
         if(btt != null){
             btnConectar.setText("Conectar");
@@ -155,7 +149,7 @@ public class MainActivity extends FragmentActivity {
         }
 
     }
-
+    //Botao de conectar
     public void connectButtonPressed(View v) {
 
         if (bluetoothPadrao == null) {
@@ -175,7 +169,7 @@ public class MainActivity extends FragmentActivity {
     }
 
 
-
+    //Metodo que aciona quando botao pressionado.
     public void acaoDosBotoes() {
         btnFrente.setOnTouchListener(new BotaoListener(frente));
         btnEsquerda.setOnTouchListener(new BotaoListener(esquerda));
@@ -188,7 +182,7 @@ public class MainActivity extends FragmentActivity {
         btn5.setOnTouchListener(new BotaoListener(b));
         btn6.setOnTouchListener(new BotaoListener(c));
     }
-
+    //Metodo que acionara as ações feitas nos botoes.
     public class BotaoListener implements OnTouchListener {
 
         private String mensagem;
@@ -220,14 +214,13 @@ public class MainActivity extends FragmentActivity {
     }
 
     boolean imprimir = true;
-
+    //Os resultados das tela caem para esse metodo que realizara as devidas ações conforme o resultado.
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
 
             // Retorno do pedido de ativação do Bluetooth
             case REQUEST_ENABLE_BT:
-
                 if (resultCode == Activity.RESULT_OK) {
                    showTextWithColorGreen(getResources().getString(R.string.bluetooth_ativado));
                     listaDeDispositivos();
@@ -236,6 +229,7 @@ public class MainActivity extends FragmentActivity {
 
                 }
                 break;
+            //Recebe o dispositivo da tela selecionado.
             case SELECT_PAIRED_DEVICE:
                 if (resultCode == RESULT_OK) {
                     if (btt == null) {
@@ -299,6 +293,7 @@ public class MainActivity extends FragmentActivity {
                     showToast("Nenhum dispositivo Selecionado");
                 }
                 break;
+            //Recebe os valores da tela de valores, e atualiza os valores atuais.
             case VALORES:
                 if (resultCode == RESULT_OK) {
                     showTextWithColorGreen(getResources().getString(R.string.mudanca_salvas));
@@ -327,7 +322,7 @@ public class MainActivity extends FragmentActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
 
-        // Inflate the menu; this adds items to the action bar if it is present.
+        //Preenche o meu; isto acrescenta itens à barra de ação se ela estiver presente.
         getMenuInflater().inflate(R.menu.menu, menu);
         btiMostrarDados = menu.findItem(R.id.item6);
         btiMostrarDados.setTitle("Mostrar");
@@ -340,6 +335,7 @@ public class MainActivity extends FragmentActivity {
     public boolean onMenuItemSelected(int panel, MenuItem item) {
 
         switch (item.getItemId()) {
+            //Fecha a aplicação:
             case android.R.id.home:
                 Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
 
@@ -347,6 +343,7 @@ public class MainActivity extends FragmentActivity {
                 finish();
 
                 break;
+            //Manda os valores atuais para a tela de valores e chama ela.
             case R.id.item3:
                 Value_Bottons.putExtra("frente", frente);
                 Value_Bottons.putExtra("direita", direita);
@@ -362,8 +359,7 @@ public class MainActivity extends FragmentActivity {
                 startActivityForResult(Value_Bottons, VALORES);
 
                 break;
-            // case R.id.item4:
-            // break;
+            //Mostra ou oculta a tela invisivel no centro a tela.
             case R.id.item6:
                 if (mostrarDados) {
                     dados.setVisibility(View.VISIBLE);
@@ -384,7 +380,7 @@ public class MainActivity extends FragmentActivity {
                 }
 
                 break;
-
+            //Mostra as informações sobre o aplicativo.
             case R.id.item8:
                 InfoFragment dFragment = new InfoFragment();
                 // Show DialogFragment
@@ -395,14 +391,7 @@ public class MainActivity extends FragmentActivity {
         return true;
     };
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+    //Salva os valores que estao gravados nas variaveis para os dados do aplicativo.
     public void salvarDados(){
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -431,18 +420,7 @@ public class MainActivity extends FragmentActivity {
         super.onResume();
         acaoDosBotoes();
     }
-
-    @Override
-    public void onStop() {
-        super.onStop();;
-        //interromperBluetooth();
-
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
+    //Usado para mostrar mensagens na tela.
     public void showToast(final String mensagem){
         runOnUiThread(new Runnable() {
             @Override
@@ -452,35 +430,18 @@ public class MainActivity extends FragmentActivity {
         });
     }
 
-    public void showText(final String mensagem, final TextView view){
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                view.setText(mensagem);
-            }
-        });
-    }
-
-
+    //Usado para mostras as mensagens em vermelho.
     public void showTextWithColorRed(String mensagem){
         Toast toast = Toast.makeText(getApplicationContext(), mensagem, Toast.LENGTH_SHORT);
         TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
         v.setTextColor(Color.RED);
         toast.show();
     }
-
+    //Usado para mostras as mensagens em verde.
     public void showTextWithColorGreen(String mensagem){
         Toast toast = Toast.makeText(getApplicationContext(), mensagem, Toast.LENGTH_SHORT);
         TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
         v.setTextColor(Color.GREEN);
         toast.show();
     }
-
-
-
-    public String caracterFinal(){
-       return ";";
-    }
-
-
 }

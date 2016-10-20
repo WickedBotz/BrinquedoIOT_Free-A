@@ -514,7 +514,6 @@ attr:actionBarPopupTheme:2130772021,
    id:action_bar_title:2131427361,
    id:action_context_bar:2131427394,
    id:edit_query:2131427395,
-   id:home:2131427332,
    id:icon:2131427369,
    id:list_item:2131427368,
    id:shortcut:2131427386,
@@ -684,7 +683,6 @@ attr:actionBarPopupTheme:2130772021,
    id:EditTextY:2131427444,
    id:EditTextZ:2131427446,
    id:FundoDados:2131427424,
-   id:action_settings:2131427479,
    id:bt_a:2131427436,
    id:bt_b:2131427437,
    id:bt_c:2131427438,
@@ -752,12 +750,12 @@ Skipped unused resource res/drawable-xhdpi-v4/dados.png: 3496 bytes (replaced wi
 Skipped unused resource res/drawable-xhdpi-v4/fundo_dados.png: 5024 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/drawable-xhdpi-v4/gplay_ico.png: 4343 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/drawable-xhdpi-v4/logoarduino.png: 3529 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-xhdpi-v4/logocatolica.png: 3634 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xhdpi-v4/logocatolica.png: 2715 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/drawable-xhdpi-v4/teste.png: 5060 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/drawable-xxhdpi-v4/dados.png: 10731 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/drawable-xxhdpi-v4/fundo_dados.png: 11701 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/drawable-xxhdpi-v4/gplay_ico.png: 4120 bytes (replaced with small dummy file of size 67 bytes)
-Skipped unused resource res/drawable-xxhdpi-v4/logoarduino.png: 5804 bytes (replaced with small dummy file of size 67 bytes)
+Skipped unused resource res/drawable-xxhdpi-v4/logoarduino.png: 8184 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/drawable-xxhdpi-v4/logocatolica.png: 4731 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/drawable-xxhdpi-v4/teste.png: 12348 bytes (replaced with small dummy file of size 67 bytes)
 Skipped unused resource res/layout-v21/abc_screen_toolbar.xml: 1632 bytes (replaced with small dummy file of size 104 bytes)

@@ -361,8 +361,14 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Salvar e Voltar</string>
     <string name="app_name">CAB-Controle Arduino Bluetooth</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="bluetooth_ativado">Bluetooth Ativado XD</string>
+    <string name="conectado">Conectado</string>
+    <string name="desconectado">Desconectado</string>
+    <string name="falhaNaConexao">Falha ao conectar</string>
     <string name="joystick_bt_connect">Conectar</string>
+    <string name="mudanca_salvas">Mudanças Salvas</string>
+    <string name="mudancas_nao_Salvas">Mundaças não salvas!</string>
+    <string name="precisa_ativar_bluetooth">Vocé precisa ativar o bluetooth</string>
     <string name="sobre_app">Grupo de Robótica da Cátolica de Santa Catarina</string>
     <string name="sobre_app_botao">Sobre o app</string>
     <string name="status_bar_notification_info_overflow">999+</string>

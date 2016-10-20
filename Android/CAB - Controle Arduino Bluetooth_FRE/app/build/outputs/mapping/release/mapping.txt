@@ -6089,11 +6089,8 @@ com.example.appbrinquedoopeniot_Free.MainActivity -> com.example.appbrinquedoope
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
-    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
     void onPause() -> onPause
     void onResume() -> onResume
-    void onStop() -> onStop
-    void onDestroy() -> onDestroy
     void showToast(java.lang.String) -> a
     void showTextWithColorRed(java.lang.String) -> b
     void showTextWithColorGreen(java.lang.String) -> c
@@ -6117,7 +6114,10 @@ com.example.appbrinquedoopeniot_Free.PairedDevices -> com.example.appbrinquedoop
     void onListItemClick(android.widget.ListView,android.view.View,int,long) -> onListItemClick
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onMenuItemSelected(int,android.view.MenuItem) -> onMenuItemSelected
-    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+com.example.appbrinquedoopeniot_Free.PairedDevices$1 -> com.example.appbrinquedoopeniot_Free.PairedDevices$1:
+    com.example.appbrinquedoopeniot_Free.PairedDevices this$0 -> a
+    void <init>(com.example.appbrinquedoopeniot_Free.PairedDevices) -> <init>
+    int compare(java.lang.Object,java.lang.Object) -> compare
 com.example.appbrinquedoopeniot_Free.Values_bottons -> com.example.appbrinquedoopeniot_Free.Values_bottons:
     android.widget.EditText EditFrente -> a
     android.widget.EditText EditDireita -> b

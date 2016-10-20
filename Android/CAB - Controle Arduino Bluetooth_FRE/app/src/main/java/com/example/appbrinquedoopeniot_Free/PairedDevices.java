@@ -15,6 +15,11 @@ import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 
@@ -27,7 +32,7 @@ public class PairedDevices extends ListActivity {
 		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		/*
-		 * Esse trecho não é essencial, mas da um melhor visual a  lista.
+		 * Esse trecho n?o ? essencial, mas da um melhor visual a  lista.
 		 * Adiciona um titulo a lista de dispositivos pareados utilizando o
 		 * layout text_header.xml.
 		 */
@@ -37,13 +42,23 @@ public class PairedDevices extends ListActivity {
 		((TextView) header.findViewById(R.id.textView)).setText("\nDispositivos pareados\n");
 		lv.addHeaderView(header, null, false);
 
+
 		/*
 		 * Usa o adaptador Bluetooth para obter uma lista de dispositivos
 		 * pareados.
 		 */
 		BluetoothAdapter btAdapter = BluetoothAdapter.getDefaultAdapter();
-		Set<BluetoothDevice> pairedDevices = btAdapter.getBondedDevices();
+		List<BluetoothDevice> pairedDevices = new LinkedList<BluetoothDevice>(btAdapter.getBondedDevices());
 
+        //Comparador usado para ordenar uma lista em ordem alfabetica
+		Comparator<BluetoothDevice> ALPHABETIC_ORDER = new Comparator<BluetoothDevice>() {
+			@Override
+			public int compare(BluetoothDevice device1, BluetoothDevice device2) {
+				return device1.getName().compareTo(device2.getName());
+			}
+		};
+        //Ordena a lista em ordem Alfabetica
+		Collections.sort(pairedDevices, ALPHABETIC_ORDER);
 		/*
 		 * Cria um modelo para a lista e o adiciona a  tela. Se houver
 		 * dispositivos pareados, adiciona cada um a lista.
@@ -58,7 +73,7 @@ public class PairedDevices extends ListActivity {
 	}
 
 	/*
-	 * Este metodo é executado quando o usuario seleciona um elemento da lista.
+	 * Este metodo ? executado quando o usuario seleciona um elemento da lista.
 	 */
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
@@ -86,7 +101,7 @@ public class PairedDevices extends ListActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
+        // Preenche o menu; isto acrescenta itens ? barra de a??o se ela estiver presente.
 		getMenuInflater().inflate(R.menu.paired_devices, menu);
 		ActionBar ab = getActionBar();
 		ab.setDisplayHomeAsUpEnabled(true);
@@ -104,20 +119,4 @@ public class PairedDevices extends ListActivity {
 		return true;
 	};
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-
-		// noinspection SimplifiableIfStatement
-		if (id == R.id.home) {
-			
-			finish();
-			return true;
-		}
-
-		return super.onOptionsItemSelected(item);
-	}
 }

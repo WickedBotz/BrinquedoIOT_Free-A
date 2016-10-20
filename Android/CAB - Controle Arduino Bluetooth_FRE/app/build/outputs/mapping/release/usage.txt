@@ -4150,9 +4150,6 @@ com.example.appbrinquedoopeniot_Free.MainActivity:
     private static final int REQUEST_ENABLE_BT
     public static final int SELECT_PAIRED_DEVICE
     public static final int VALORES
-    456:462:public void showText(java.lang.String,android.widget.TextView)
-    482:482:public java.lang.String caracterFinal()
-com.example.appbrinquedoopeniot_Free.MainActivity$3
 com.example.appbrinquedoopeniot_Free.R
 com.example.appbrinquedoopeniot_Free.R$anim
 com.example.appbrinquedoopeniot_Free.R$attr

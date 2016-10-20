@@ -72,18 +72,18 @@ public class Values_bottons extends Activity {
 		return valores;
 	}
 	
-public void valoresPadrao(){
-	EditFrente.setText("8");
-	EditDireita.setText("6");
-	EditEsquerda.setText("4");
-	EditTras.setText("2");
-	EditX.setText("x");
-	EditY.setText("y");
-	EditZ.setText("z");
-	EditA.setText("a");
-	EditB.setText("b");
-	EditC.setText("c");
-	EditConteudoAVoltar.setText("0");
+    public void valoresPadrao(){
+        EditFrente.setText("8");
+        EditDireita.setText("6");
+        EditEsquerda.setText("4");
+        EditTras.setText("2");
+        EditX.setText("x");
+        EditY.setText("y");
+        EditZ.setText("z");
+        EditA.setText("a");
+        EditB.setText("b");
+        EditC.setText("c");
+        EditConteudoAVoltar.setText("0");
 		
 	}
 
@@ -91,7 +91,7 @@ public void valoresPadrao(){
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
+		// Preenche o menu; isto acrescenta itens ? barra de a??o se ela estiver presente.
 		getMenuInflater().inflate(R.menu.values_bottons, menu);
 		return true;
 	}

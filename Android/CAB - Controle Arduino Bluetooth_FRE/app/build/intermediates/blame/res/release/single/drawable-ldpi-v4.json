@@ -1,11 +1,51 @@
 [
     {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_x.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_x.xml"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_esquerda.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_esquerda.xml"
+    },
+    {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_x.xml",
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_x.xml"
     },
     {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_frente.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_frente.xml"
+    },
+    {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_frente.xml",
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_frente.xml"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\start_ani.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\start_ani.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_esquerda.xml",
+        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_esquerda.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_a.xml",
+        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_a.xml"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_a.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_a.xml"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_b.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_b.xml"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\connect_ani.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\connect_ani.xml"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_tras.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_tras.xml"
     },
     {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_z.xml",
@@ -20,12 +60,16 @@
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_b.xml"
     },
     {
-        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\start_ani.xml",
-        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\start_ani.xml"
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_z.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_z.xml"
     },
     {
-        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_esquerda.xml",
-        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_esquerda.xml"
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_direita.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_direita.xml"
+    },
+    {
+        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\start_ani.xml",
+        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\start_ani.xml"
     },
     {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_c.xml",
@@ -36,8 +80,12 @@
         "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_y.xml"
     },
     {
-        "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_a.xml",
-        "source": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_a.xml"
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_c.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_c.xml"
+    },
+    {
+        "merged": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_y.xml",
+        "source": "C:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\src\\main\\res\\drawable-ldpi\\layout_botao_y.xml"
     },
     {
         "merged": "C:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\res\\merged\\release\\drawable-ldpi-v4\\layout_botao_tras.xml",

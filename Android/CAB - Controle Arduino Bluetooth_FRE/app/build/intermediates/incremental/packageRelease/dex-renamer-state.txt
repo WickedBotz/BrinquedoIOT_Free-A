@@ -1,4 +1,4 @@
-#Tue Oct 11 18:24:05 BRT 2016
-base.0=C\:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
+#Thu Oct 20 15:06:30 BRST 2016
+base.0=C\:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.0=C\:\\AndroidStudio\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex
+file.0=C\:\\igorF\\BrinquedoIOT_Free-A\\Android\\CAB - Controle Arduino Bluetooth_FRE\\app\\build\\intermediates\\transforms\\dex\\release\\folders\\1000\\1f\\main\\classes.dex
